@@ -31,6 +31,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { TimeAgoPipe } from 'time-ago-pipe';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -90,7 +91,8 @@ export class TimeAgoExtendsPipePipe extends TimeAgoPipe implements PipeTransform
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
-      PreventUnsavedChanges
+      PreventUnsavedChanges,
+      ListsResolver
    ],
    bootstrap: [
       AppComponent
